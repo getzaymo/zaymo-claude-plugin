@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "zaymo": {
+      "type": "http",
+      "url": "https://app.zaymo.com/api/mcp"
+    }
+  }
+}
