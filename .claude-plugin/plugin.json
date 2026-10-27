@@ -3,8 +3,22 @@
   "displayName": "Zaymo for Klaviyo",
   "version": "0.1.0",
   "description": "Test, QA and improve Klaviyo email: design split and holdout tests, read results honestly, audit flows for duplicate sends, and catch inbox rendering traps before you send. Connects to Zaymo for live tests, analytics and interactive email.",
-  "author": { "name": "Zaymo", "url": "https://www.zaymo.com" },
+  "author": {
+    "name": "Zaymo",
+    "url": "https://www.zaymo.com"
+  },
   "homepage": "https://www.zaymo.com",
   "license": "MIT",
-  "keywords": ["klaviyo", "email marketing", "a/b testing", "split testing", "email qa", "interactive email", "amp", "ecommerce"]
+  "keywords": [
+    "klaviyo",
+    "email marketing",
+    "a/b testing",
+    "split testing",
+    "email qa",
+    "interactive email",
+    "amp",
+    "ecommerce"
+  ],
+  "icon": "./assets/icon-512.png",
+  "privacyPolicyUrl": "https://www.zaymo.com/privacy"
 }
