@@ -20,5 +20,9 @@
     "ecommerce"
   ],
   "icon": "./assets/icon-512.png",
-  "privacyPolicyUrl": "https://www.zaymo.com/privacy"
+  "privacyPolicyUrl": "https://www.zaymo.com/privacy",
+  "repository": "https://github.com/getzaymo/zaymo-claude-plugin",
+  "supportUrl": "https://help.zaymo.com",
+  "documentationUrl": "https://github.com/getzaymo/zaymo-claude-plugin#readme",
+  "termsOfServiceUrl": "https://www.zaymo.com/terms"
 }
