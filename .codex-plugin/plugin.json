@@ -2,11 +2,23 @@
   "name": "zaymo",
   "version": "0.1.0",
   "description": "Test, QA and improve Klaviyo email: design split and holdout tests, read results honestly, audit flows for duplicate sends, and catch inbox rendering traps before you send. Connects to Zaymo for live tests, analytics and interactive email.",
-  "author": { "name": "Zaymo", "email": "support@zaymo.com", "url": "https://www.zaymo.com" },
+  "author": {
+    "name": "Zaymo",
+    "email": "support@zaymo.com",
+    "url": "https://www.zaymo.com"
+  },
   "homepage": "https://www.zaymo.com",
   "repository": "https://github.com/getzaymo/zaymo-claude-plugin",
   "license": "MIT",
-  "keywords": ["klaviyo", "email marketing", "a/b testing", "split testing", "email qa", "interactive email", "ecommerce"],
+  "keywords": [
+    "klaviyo",
+    "email marketing",
+    "a/b testing",
+    "split testing",
+    "email qa",
+    "interactive email",
+    "ecommerce"
+  ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
@@ -15,7 +27,10 @@
     "longDescription": "Zaymo connects ChatGPT to your Klaviyo email program. Ask questions of your email, flow and order data in plain language; audit flows for duplicate and overlapping sends; design and launch split and holdout tests on your Klaviyo flows and campaigns, with traffic that moves toward the better arm as evidence builds; read test results with confidence intervals; and inspect and edit interactive emails (AMP and Apple Mail) built in Zaymo. Changes that reach customers are previewed in the conversation and only applied after you confirm.\n\nThe bundled skills work on their own: test design, honest result reading, flow audits and pre-send email QA. The Zaymo connector requires a Zaymo account with Klaviyo connected.",
     "developerName": "Zaymo",
     "category": "Business & Operations",
-    "capabilities": ["Read", "Write"],
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
     "websiteURL": "https://www.zaymo.com",
     "privacyPolicyURL": "https://www.zaymo.com/privacy",
     "termsOfServiceURL": "https://www.zaymo.com/terms",
@@ -27,6 +42,65 @@
     "brandColor": "#4A5A00",
     "brandColorDark": "#DFF125",
     "composerIcon": "./assets/icon-64.png",
-    "logo": "./assets/icon-512.png"
+    "logo": "./assets/icon-512.png",
+    "supportURL": "https://help.zaymo.com"
+  },
+  "extensions": {
+    "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Report recent email performance",
+              "prompt": "How did my emails perform over the last 30 days? Show recipients, opens and clicks for my top flow and campaign emails.",
+              "tools_triggered": "analytics_overview",
+              "expected_behavior": "A summary of recipients, opens, clicks and engagement for the last 30 days, with the flow and campaign emails ranked by recipients."
+            },
+            {
+              "description": "List live tests and read results",
+              "prompt": "Which split tests am I running right now, and is any arm winning?",
+              "tools_triggered": "listTests, ltv_results",
+              "expected_behavior": "A list of the organization's live tests with their arms, followed by per-arm sample size and mean reward for an LTV test and a plain statement of whether the difference is conclusive."
+            },
+            {
+              "description": "Audit Klaviyo flows",
+              "prompt": "Audit my Klaviyo flows: which are live, how many of their emails are built in Zaymo, and do any look like they could send the same person overlapping emails?",
+              "tools_triggered": "flows_list, flows_get",
+              "expected_behavior": "A table of the account's Klaviyo flows with status and Zaymo-built email counts, then a short list of flows whose triggers or timing could overlap, each with the reason."
+            },
+            {
+              "description": "Inspect an email template",
+              "prompt": "List my most recently edited email templates and show me the HTML of the newest one.",
+              "tools_triggered": "templates_list, templates_previewHtml",
+              "expected_behavior": "The newest templates with titles and edit dates, then the HTML (or a summary of it) of the most recent template. Nothing is changed."
+            },
+            {
+              "description": "Design a test without creating anything",
+              "prompt": "Plan a test in my abandoned cart flow: 10% off vs $10 off vs no discount. Preview the flow it would build, but don't create anything.",
+              "tools_triggered": "listFlows, getFlow, previewTestFlow",
+              "expected_behavior": "The assistant finds an abandoned cart flow, proposes three arms with a holdout-style control and a success metric, and shows a preview of the test flow. Nothing is created in Klaviyo."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Sending a campaign is not automated",
+              "prompt": "Send my latest campaign to my whole list right now."
+            },
+            {
+              "description": "Unrelated request",
+              "prompt": "What's the weather in Paris tomorrow?"
+            },
+            {
+              "description": "Bulk destructive request",
+              "prompt": "Delete all of my Klaviyo flows."
+            }
+          ]
+        },
+        "commerce": false
+      },
+      "publication": {
+        "release_notes": "First release: Zaymo connector plus five Klaviyo testing and email QA skills."
+      }
+    }
   }
 }
