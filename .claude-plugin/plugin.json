@@ -1,8 +1,8 @@
 {
   "name": "zaymo",
-  "displayName": "Zaymo for Klaviyo",
-  "version": "0.1.0",
-  "description": "Test, QA and improve Klaviyo email: design split and holdout tests, read results honestly, audit flows for duplicate sends, and catch inbox rendering traps before you send. Connects to Zaymo for live tests, analytics and interactive email.",
+  "displayName": "Zaymo",
+  "version": "0.1.1",
+  "description": "Email testing and QA for teams that send with Klaviyo: design split and holdout tests, read results honestly, audit flows for duplicate sends, and catch inbox rendering traps before you send. Connects to your Zaymo account for live tests, analytics and interactive email.",
   "author": {
     "name": "Zaymo",
     "url": "https://www.zaymo.com"

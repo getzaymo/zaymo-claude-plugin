@@ -1,8 +1,8 @@
-# Zaymo for Klaviyo
+# Zaymo
 
 ![Zaymo](assets/icon-64.png)
 
-Skills and a connector for people who run email on Klaviyo: design split and holdout tests that give a real answer, read test results without fooling yourself, audit flows for duplicate and overlapping sends, and catch the inbox rendering traps that only show up after you hit send.
+Skills and a connector for email testing and QA, for teams that send with Klaviyo: design split and holdout tests that give a real answer, read test results without fooling yourself, audit flows for duplicate and overlapping sends, and catch the inbox rendering traps that only show up after you hit send.
 
 The skills work on their own, with any Klaviyo data you paste in or reach through another connector. With the Zaymo connector set up, Claude can also read your Zaymo organization's live data and act in it: build and launch tests on your Klaviyo flows, report on results, and edit interactive emails, each write shown to you for confirmation first.
 
@@ -40,3 +40,5 @@ The Zaymo connector sends the requests Claude makes in your conversation, and th
 ## Support
 
 support@zaymo.com
+
+Zaymo is an independent company and is not affiliated with or endorsed by Klaviyo, Anthropic or OpenAI. Klaviyo is a trademark of its owner.

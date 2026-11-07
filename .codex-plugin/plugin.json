@@ -1,7 +1,7 @@
 {
   "name": "zaymo",
-  "version": "0.1.0",
-  "description": "Test, QA and improve Klaviyo email: design split and holdout tests, read results honestly, audit flows for duplicate sends, and catch inbox rendering traps before you send. Connects to Zaymo for live tests, analytics and interactive email.",
+  "version": "0.1.1",
+  "description": "Email testing and QA for teams that send with Klaviyo: design split and holdout tests, read results honestly, audit flows for duplicate sends, and catch inbox rendering traps before you send. Connects to your Zaymo account for live tests, analytics and interactive email.",
   "author": {
     "name": "Zaymo",
     "email": "support@zaymo.com",
@@ -22,9 +22,9 @@
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Zaymo for Klaviyo",
-    "shortDescription": "Klaviyo testing and email QA",
-    "longDescription": "Zaymo connects ChatGPT to your Klaviyo email program. Ask questions of your email, flow and order data in plain language; audit flows for duplicate and overlapping sends; design and launch split and holdout tests on your Klaviyo flows and campaigns, with traffic that moves toward the better arm as evidence builds; read test results with confidence intervals; and inspect and edit interactive emails (AMP and Apple Mail) built in Zaymo. Changes that reach customers are previewed in the conversation and only applied after you confirm.\n\nThe bundled skills work on their own: test design, honest result reading, flow audits and pre-send email QA. The Zaymo connector requires a Zaymo account with Klaviyo connected.",
+    "displayName": "Zaymo",
+    "shortDescription": "Email testing and QA",
+    "longDescription": "Zaymo is an email testing and QA platform. With your Zaymo account connected, you can ask questions of your email, flow and order data in plain language; audit flows for duplicate and overlapping sends; design and launch split and holdout tests on the flows and campaigns in the Klaviyo account you have connected to Zaymo, with traffic that moves toward the better arm as evidence builds; read test results with confidence intervals; and inspect and edit interactive emails (AMP and Apple Mail) built in Zaymo. Changes that reach customers are previewed in the conversation and only applied after you confirm.\n\nThe bundled skills work on their own: test design, honest result reading, flow audits and pre-send email QA. The Zaymo connector requires a Zaymo account with a Klaviyo account connected. Zaymo is an independent company and is not affiliated with or endorsed by Klaviyo.",
     "developerName": "Zaymo",
     "category": "Business & Operations",
     "capabilities": [
@@ -99,7 +99,7 @@
         "commerce": false
       },
       "publication": {
-        "release_notes": "First release: Zaymo connector plus five Klaviyo testing and email QA skills."
+        "release_notes": "Renamed to Zaymo; descriptions no longer imply affiliation with other companies. Tool annotations now mark every in-place update, publish and live-traffic change as destructive; the privacy policy now covers the data the connector uses."
       }
     }
   }
