@@ -4,7 +4,7 @@
 
 Skills and a connector for email testing and QA, for teams that send with Klaviyo: design split and holdout tests that give a real answer, read test results without fooling yourself, audit flows for duplicate and overlapping sends, and catch the inbox rendering traps that only show up after you hit send.
 
-The skills work on their own, with any Klaviyo data you paste in or reach through another connector. With the Zaymo connector set up, Claude can also read your Zaymo organization's live data and act in it: build and launch tests on your Klaviyo flows, report on results, and edit interactive emails, each write shown to you for confirmation first.
+The skills work on their own, with any Klaviyo data you paste in or reach through another connector. With the Zaymo connector set up, Claude can also read your Zaymo organization's live data and act in it: build and launch tests on your Klaviyo flows, report on results, and edit interactive emails.
 
 ## Skills
 
@@ -35,7 +35,7 @@ A Zaymo account is required for the connector; the skills need nothing. Get star
 
 The skills are instructions only: they run nothing on your computer and send nothing anywhere.
 
-The Zaymo connector sends the requests Claude makes in your conversation, and the data those requests need, to `https://app.zaymo.com/api/mcp`, which acts on your Zaymo organization and the Klaviyo and Shopify accounts you have connected to Zaymo. Zaymo stores an audit record of each tool call. Changes that reach your customers (launching a test, publishing a template, changing a flow) are previewed and need your confirmation in the conversation. See the [Zaymo privacy policy](https://www.zaymo.com/privacy).
+The Zaymo connector sends the requests Claude makes in your conversation, and the data those requests need, to `https://app.zaymo.com/api/mcp`, which acts on your Zaymo organization and the Klaviyo and Shopify accounts you have connected to Zaymo. Zaymo stores an audit record of each tool call. Zaymo applies a change when Claude calls the tool, without a preview step of its own. Every tool is labelled read-only or destructive, and tools that delete, overwrite, send, publish or go live are marked destructive so Claude asks for your approval before calling them. See the [Zaymo privacy policy](https://www.zaymo.com/privacy).
 
 ## Support
 
